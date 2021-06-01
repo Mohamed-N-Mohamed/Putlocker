@@ -49,7 +49,7 @@ function App() {
 
  const handleOnClick = async (type)  => {
    if(type === 'movie'){
-       const moviesResponse = await fetch(movie_api_key);
+  const moviesResponse = await fetch(movie_api_key);
   const moviesJson = await moviesResponse.json();
     setMovies(moviesJson.results)
 
@@ -72,16 +72,18 @@ function App() {
     </form>
   </header>
 
- <div className="container">
- <div className="button-click">
+  <div className="button-click">
     <div>
-    <button className="Movies" onClick={() => handleOnClick('movie')}>TV</button>
+    <button className="btn" onClick={() => handleOnClick('movie')}>Movies</button>
     </div>
 
     <div>
-    <button className="TV" onClick={() => handleOnClick('tv')}>TV</button>
+    <button className="btn" onClick={() => handleOnClick('tv')}>TV Shows</button>
     </div>
   </div>
+
+ <div className="container">
+
 <div className ="movie-container">
 {movies.map((movie) => (
   <Movie key={movie.id} {...movie}/> 

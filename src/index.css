@@ -118,12 +118,21 @@ header {
   text-align: center;
   font-weight: bold;
 }
-.button-click{
-
+.button-click {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+  padding: 0 1rem;
 }
-.button-click .TV{
-
-}
-.button-click .Movies{
-
+.button-click .btn {
+  display: inline-block;
+  padding: 0.55rem 2rem;
+  background-color: #20223f;
+  border-radius: 0.25rem;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  margin-top: 20px;
+  cursor: pointer;
 }
